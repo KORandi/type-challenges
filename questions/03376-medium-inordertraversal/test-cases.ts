@@ -2,15 +2,43 @@ import type { Equal, Expect } from '@type-challenges/utils'
 
 const tree1 = {
   val: 1,
-  left: null,
-  right: {
+  left: {
     val: 2,
     left: {
-      val: 3,
+      val: 4,
       left: null,
       right: null,
     },
-    right: null,
+    right: {
+      val: 5,
+      left: null,
+      right: null,
+    },
+  },
+  right: {
+    val: 3,
+    left: {
+      val: 6,
+      left: {
+        val: 8,
+        left: null,
+        right: null,
+      },
+      right: {
+        val: 9,
+        left: null,
+        right: null,
+      },
+    },
+    right: {
+      val: 7,
+      left: {
+        val: 10,
+        left: null,
+        right: null,
+      },
+      right: null,
+    },
   },
 } as const
 
