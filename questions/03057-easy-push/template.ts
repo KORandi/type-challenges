@@ -1,1 +1,1 @@
-type Push<T, U> = any
+type Push<T extends Array<unknown>, U> = [...T, U]
