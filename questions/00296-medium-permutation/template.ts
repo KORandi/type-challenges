@@ -1,5 +1,6 @@
-type Permutation<T extends string> = [T] extends [never]
-  ? []
-  : {
-      [K in T]: [K, ...Permutation<T extends K ? never : T>]
-    }[T]
+type Permutation<T, K = T> =
+    [T] extends [never]
+      ? []
+      : K extends K
+        ? [K, ...Permutation<Exclude<T, K>>]
+        : never
