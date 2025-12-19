@@ -1,1 +1,4 @@
-type ConstructTuple<L extends number> = any
+type ConstructTuple<L extends number, T extends unknown[] = []> =
+T['length'] extends L
+  ? T
+  : ConstructTuple<L, [...T, unknown]>
