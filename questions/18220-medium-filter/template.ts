@@ -4,5 +4,3 @@ T extends [infer L, ... infer R]
     ? [L, ...Filter<R, P>]
     : [...Filter<R, P>]
   : T
-
-type X = Filter<[0, 1, 2], 2> // [2]
